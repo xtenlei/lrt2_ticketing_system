@@ -8,17 +8,17 @@ class CreditManager {
 public:
 	CreditManager() : credits(0.0) {}
 
-	double getCredits() const {
+	int getCredits() const {
 		return credits;
 	}
 
-	void loadCredits(double amount) {
+	void loadCredits(int amount) {
 		credits += amount;
 		cout << "Beep Card loaded " << amount << " credits. \nTotal credits: P" << credits << endl;
 		cout << "\n";
 	}
 
-	void makePurchase(double amount) {
+	void makePurchase(int amount) {
 		if (amount <= credits) {
 			credits -= amount;
 			cout << "Ticket purchase successful. P" << amount << " deducted. Remaining balance: P" << credits << endl;
@@ -30,7 +30,7 @@ public:
 	}
 
 private:
-	double credits;
+	int credits;
 };
 
 class MyClass {
