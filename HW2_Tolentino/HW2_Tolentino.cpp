@@ -310,6 +310,10 @@ void MyClass::beep_load() {
 				creditManager.loadCredits(amount);
 			}
 
+			else {
+				cout << "Invalid amount. Try again." << endl; // added for invalid input
+			}
+
 			break;
 		}
 		case 2: {
